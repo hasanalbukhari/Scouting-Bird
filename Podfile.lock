@@ -2,6 +2,13 @@ PODS:
   - Alamofire (4.0.1)
   - AlamofireImage (3.1.0):
     - Alamofire (~> 4.0)
+  - CocoaLumberjack/Core (3.0.0)
+  - CocoaLumberjack/Default (3.0.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (3.0.0):
+    - CocoaLumberjack/Default
+  - CocoaLumberjack/Swift (3.0.0):
+    - CocoaLumberjack/Extensions
   - GoogleMaps (2.1.1):
     - GoogleMaps/Maps (= 2.1.1)
   - GoogleMaps/Base (2.1.1)
@@ -11,13 +18,15 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AlamofireImage (~> 3.1)
+  - CocoaLumberjack/Swift
   - GoogleMaps
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   AlamofireImage: bb8c8351c51cb1633bb6be69b6dbbaff37ce65b7
+  CocoaLumberjack: c823149bccc5519a9447aeb433be7b1212a7d6a5
   GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
 
-PODFILE CHECKSUM: bd6716066cdf41c92fd45c31c5a09ca8a39aa48d
+PODFILE CHECKSUM: 2922dd80143425c317367f14762134f67be8f914
 
 COCOAPODS: 1.1.1

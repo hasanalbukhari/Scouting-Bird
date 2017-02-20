@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
+        Log.info("Home controller loaded")
+        
         // set bird animation sprite.
         Common.setupBirdImageAnimationFor(imageView: birdImageView)
         

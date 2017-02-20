@@ -23,7 +23,7 @@ class WebViewController: UIViewController, LoadingProtocol, UIWebViewDelegate, P
         super.viewDidLoad()
         
         title = place.place_name
-        print("WebView screen loaded")
+        Log.info("WebView controller loaded")
         
         // disable call button til the phone number is fetched and verified.
         callButtonItem.isEnabled = false
@@ -102,7 +102,7 @@ class WebViewController: UIViewController, LoadingProtocol, UIWebViewDelegate, P
     
     // MARK: WebView Delegate Methods
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        print("webview error: \(error)")
+        Log.debug("webview error: \(error)")
         loadingView.stopLoading()
     }
     

@@ -10,5 +10,6 @@ target 'Scouting Bird' do
     pod 'GoogleMaps'
     pod 'Alamofire', '~> 4.0'
     pod 'AlamofireImage', '~> 3.1'
+    pod 'CocoaLumberjack/Swift'
     
 end

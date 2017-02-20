@@ -19,6 +19,7 @@
 		185C6FA21E5AF43D002A4856 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C6FA11E5AF43D002A4856 /* Common.swift */; };
 		185C6FAC1E5AF745002A4856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185C6FAA1E5AF745002A4856 /* LaunchScreen.storyboard */; };
 		185C6FAD1E5AF745002A4856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185C6FAB1E5AF745002A4856 /* Main.storyboard */; };
+		185C6FAF1E5B1E8A002A4856 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C6FAE1E5B1E8A002A4856 /* Log.swift */; };
 		18C3A5881E58DDF40046DABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3A5871E58DDF40046DABF /* AppDelegate.swift */; };
 		18C3A58A1E58DDF40046DABF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3A5891E58DDF40046DABF /* ViewController.swift */; };
 		18C3A58F1E58DDF40046DABF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C3A58E1E58DDF40046DABF /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		185C6FA11E5AF43D002A4856 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		185C6FAA1E5AF745002A4856 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185C6FAB1E5AF745002A4856 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		185C6FAE1E5B1E8A002A4856 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		18C3A5841E58DDF40046DABF /* Scouting Bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scouting Bird.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C3A5871E58DDF40046DABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C3A5891E58DDF40046DABF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		185C6FA71E5AF53D002A4856 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				185C6FAE1E5B1E8A002A4856 /* Log.swift */,
 				185C6FA11E5AF43D002A4856 /* Common.swift */,
 			);
 			path = Common;
@@ -285,6 +288,7 @@
 			files = (
 				18C3A58A1E58DDF40046DABF /* ViewController.swift in Sources */,
 				184F14321E59A9A100D450AA /* CustomSegue.swift in Sources */,
+				185C6FAF1E5B1E8A002A4856 /* Log.swift in Sources */,
 				184F14401E5A569E00D450AA /* PlacesModel.swift in Sources */,
 				184F14341E59B03800D450AA /* ScoutController.swift in Sources */,
 				185C6FA21E5AF43D002A4856 /* Common.swift in Sources */,

@@ -53,7 +53,7 @@ class LocationModel: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("location manager error: \(error.localizedDescription)")
+        Log.debug("location manager error: \(error.localizedDescription)")
         delegate?.locationFailWith(error: error.localizedDescription)
     }
     
@@ -61,12 +61,12 @@ class LocationModel: NSObject, CLLocationManagerDelegate {
         switch status {
             
         case .notDetermined:
-            print("User still thinking granting location access!")
+            Log.debug("User still thinking granting location access!")
             locationManager?.stopUpdatingLocation()
             break
             
         case .denied:
-            print("User denied location access request!!")
+            Log.debug("User denied location access request!!")
             delegate?.locationAuth(state: .denied)
             locationManager?.stopUpdatingLocation()
             break
@@ -86,7 +86,7 @@ class LocationModel: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("last location: lat \(locations.last?.coordinate.latitude) - lon \(locations.last?.coordinate.longitude)")
+        Log.debug("last location: lat \(locations.last?.coordinate.latitude) - lon \(locations.last?.coordinate.longitude)")
         
         locationManager?.stopUpdatingLocation()
         locationManager?.delegate = nil

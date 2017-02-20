@@ -36,7 +36,7 @@ class PlacesModel: NSObject {
         var urlString: String = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(coordinate.latitude),\(coordinate.longitude)&radius=500&key=\(apiKey)"
         
         urlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        print(urlString)
+        Log.debug(urlString)
         
         let url = URL(string: urlString)!
         
@@ -52,7 +52,7 @@ class PlacesModel: NSObject {
                 // parsing could me done on a seperate entity
                 if let data = data {
                     if let jsonResult = (try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)) as? NSDictionary {
-                        print(jsonResult)
+                        Log.debug(jsonResult.description)
                         
                         let places: NSMutableArray = NSMutableArray()
                         
@@ -92,7 +92,7 @@ class PlacesModel: NSObject {
                                     
                                     places.add(place)
                                     
-                                    print("index", index, place.place_name, place.place_address, place.place_latitude, place.place_longitue)
+                                    Log.debug("index \(index) \(place.place_name) \(place.place_address) \(place.place_latitude) \(place.place_longitue)")
                                 }
                             }
                             
@@ -103,13 +103,13 @@ class PlacesModel: NSObject {
                 }
                 
                 if error != nil {
-                    print(error!)
+                    Log.debug(error?.localizedDescription)
                     self.delegate?.failWith(error: (error?.localizedDescription)!)
                 } else if data == nil {
-                    print("Data is empty")
+                    Log.debug("Data is empty")
                     self.delegate?.failWith(error: "Data is empty")
                 } else {
-                    print("Something wrong happen")
+                    Log.debug("Something wrong happen")
                     self.delegate?.failWith(error: "Something wrong happen!")
                 }
             }
@@ -122,7 +122,7 @@ class PlacesModel: NSObject {
         var urlString: String = "https://maps.googleapis.com/maps/api/place/details/json?placeid=\(placeId)&key=\(apiKey)"
         
         urlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        print(urlString)
+        Log.debug(urlString)
         
         let url = URL(string: urlString)!
         
@@ -132,7 +132,7 @@ class PlacesModel: NSObject {
                 // parsing could me done on a seperate entity
                 if let data = data {
                     if let jsonResult = (try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)) as? NSDictionary {
-                        print(jsonResult)
+                        Log.debug(jsonResult.description)
                         
                         let placeDetails: NSDictionary? = jsonResult["result"] as? NSDictionary
                         if placeDetails != nil {
@@ -146,7 +146,7 @@ class PlacesModel: NSObject {
                                 place.place_phone = phone as String
                             }
                             
-                            print("place", place.place_website, place.place_phone)
+                            Log.debug("Place: \(place.place_website) \(place.place_phone)")
                             self.delegate?.successWith(place: place)
                             return
                         }
@@ -154,10 +154,10 @@ class PlacesModel: NSObject {
                 }
                 
                 if error != nil {
-                    print(error!)
+                    Log.debug(error?.localizedDescription)
                     self.delegate?.failWith(error: (error?.localizedDescription)!)
                 } else {
-                    print("Something wrong happen")
+                    Log.debug("Something wrong happen")
                     self.delegate?.failWith(error: "Something wrong happen!")
                 }
             }

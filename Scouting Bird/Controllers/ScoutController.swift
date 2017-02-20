@@ -35,6 +35,8 @@ class ScoutController: UIViewController, UITableViewDelegate, UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Log.info("Scout controller loaded")
+        
         places = NSMutableArray()
         
         noteView.isHidden = true
