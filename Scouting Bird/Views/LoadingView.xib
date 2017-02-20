@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingView">
+            <connections>
+                <outlet property="activityIndicator" destination="Dth-A9-4pO" id="1Mv-d5-CDF"/>
+                <outlet property="messageLabel" destination="7Vk-VY-dgZ" id="cuG-tp-Vix"/>
+                <outlet property="reloadButton" destination="zKx-3C-Xhp" id="PXt-YW-2Kn"/>
+                <outlet property="successImageView" destination="Za2-Ck-YkV" id="14r-H7-6lI"/>
+                <outlet property="view" destination="iN0-l3-epB" id="dV8-Zl-biv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will get back to you" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vk-VY-dgZ">
+                    <rect key="frame" x="10" y="41" width="300" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="AUA-T1-wKT"/>
+                        <constraint firstAttribute="width" constant="223" id="UwS-9c-HAu"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="223" id="x4m-53-ReO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="AUA-T1-wKT"/>
+                            <exclude reference="UwS-9c-HAu"/>
+                            <exclude reference="x4m-53-ReO"/>
+                        </mask>
+                    </variation>
+                </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Dth-A9-4pO">
+                    <rect key="frame" x="150" y="11" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="13y-FP-1Vf"/>
+                        <constraint firstAttribute="width" constant="37" id="P8c-nq-F5N"/>
+                        <constraint firstAttribute="height" constant="37" id="ZwK-wZ-jdf"/>
+                        <constraint firstAttribute="width" constant="20" id="rLd-T2-fL3"/>
+                    </constraints>
+                    <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="P8c-nq-F5N"/>
+                            <exclude reference="ZwK-wZ-jdf"/>
+                        </mask>
+                    </variation>
+                </activityIndicatorView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKx-3C-Xhp">
+                    <rect key="frame" x="140" y="2" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="9a6-4t-B3U"/>
+                        <constraint firstAttribute="width" constant="40" id="Yc3-9s-T4c"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="10"/>
+                    <state key="normal" image="reload">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="reloadButtonTapped:" destination="-1" eventType="touchUpInside" id="jo2-fM-2Id"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb_up" translatesAutoresizingMaskIntoConstraints="NO" id="Za2-Ck-YkV">
+                    <rect key="frame" x="142" y="4" width="36" height="36"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="iP9-Nw-tTM"/>
+                        <constraint firstAttribute="height" constant="36" id="m8W-Tg-28c"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7Vk-VY-dgZ" firstAttribute="top" secondItem="Dth-A9-4pO" secondAttribute="bottom" constant="10" id="Dv5-WI-vds"/>
+                <constraint firstItem="Za2-Ck-YkV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="I91-v2-QiU"/>
+                <constraint firstItem="zKx-3C-Xhp" firstAttribute="centerY" secondItem="Dth-A9-4pO" secondAttribute="centerY" constant="0.5" id="JLh-wD-l9r"/>
+                <constraint firstItem="zKx-3C-Xhp" firstAttribute="centerX" secondItem="Dth-A9-4pO" secondAttribute="centerX" constant="-0.5" id="JlO-41-7rc"/>
+                <constraint firstItem="Za2-Ck-YkV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="Rap-Vh-Gy5"/>
+                <constraint firstItem="Dth-A9-4pO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="11" id="Z6X-Fn-GjK"/>
+                <constraint firstAttribute="right" secondItem="7Vk-VY-dgZ" secondAttribute="right" constant="10" id="fF1-I2-UXR"/>
+                <constraint firstAttribute="centerX" secondItem="Dth-A9-4pO" secondAttribute="centerX" id="iUB-v3-rPb"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7Vk-VY-dgZ" secondAttribute="bottom" id="oUK-4R-uTS"/>
+                <constraint firstItem="7Vk-VY-dgZ" firstAttribute="left" secondItem="iN0-l3-epB" secondAttribute="left" constant="10" id="tR7-hF-CS2"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="540" y="149"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="reload" width="64" height="66"/>
+        <image name="thumb_up" width="64" height="64"/>
+    </resources>
+</document>
