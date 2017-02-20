@@ -1,5 +1,5 @@
 # Scouting-Bird
-iOS app that shows places around you and allowing you to check their website and make them a call
+iOS app that shows places around you and allows you to check their website and make them a call.
 
 # iOS 10
 Tested on iOS 9 device.
